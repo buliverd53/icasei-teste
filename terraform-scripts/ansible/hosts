@@ -1,9 +1,9 @@
 [docker_swarm_manager]
-MANAGER1 ansible_ssh_host=10.10.10.2 ansible_ssh_port=22 ansible_ssh_user=root ansible_ssh_pass=ExemploPost
-MANAGER2 ansible_ssh_host=10.10.10.3 ansible_ssh_port=22 ansible_ssh_user=root ansible_ssh_pass=ExemploPost
-MANAGER3 ansible_ssh_host=10.10.10.4 ansible_ssh_port=22 ansible_ssh_user=root ansible_ssh_pass=ExemploPost
+MANAGER1 ansible_ssh_host=172.17.0.166
+MANAGER2 ansible_ssh_host=172.17.0.166
+MANAGER3 ansible_ssh_host=172.17.0.166
 
 [docker_swarm_worker]
-WORKER1 ansible_ssh_host=10.10.10.5 ansible_ssh_port=22 ansible_ssh_user=root ansible_ssh_pass=ExemploPost
-WORKER2 ansible_ssh_host=10.10.10.6 ansible_ssh_port=22 ansible_ssh_user=root ansible_ssh_pass=ExemploPost
-WORKER3 ansible_ssh_host=10.10.10.7 ansible_ssh_port=22 ansible_ssh_user=root ansible_ssh_pass=ExemploPost
+WORKER1 ansible_ssh_host=172.17.1.24
+WORKER2 ansible_ssh_host=172.17.1.24
+WORKER3 ansible_ssh_host=172.17.1.24
