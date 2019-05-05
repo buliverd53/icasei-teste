@@ -1,0 +1,3 @@
+---
+  docker_swarm_manager_ip: "10.10.10.2"
+  docker_swarm_manager_port: "2377"
