@@ -14,7 +14,7 @@ terraform init
 terraform apply -auto-approve
 ```
 
-Após isso, acessar o diretório ansible e executar o script bash:
+Após todas as 6 instâncias estiverem no ar, acessar o diretório ansible e executar o script bash:
 
 ```
 sh setup-swarm.sh

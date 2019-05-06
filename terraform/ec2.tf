@@ -10,12 +10,6 @@ resource "aws_security_group" "allow_http_https" {
     cidr_blocks     = ["172.17.0.0/16"]
   }
   ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "TCP"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-  ingress {
     from_port   = 80
     to_port     = 80
     protocol    = "TCP"
@@ -96,7 +90,7 @@ resource "aws_launch_configuration" "public_docker_cluster_lc" {
 }
 
 resource "aws_autoscaling_group" "public_docker_cluster_asg" {
-  depends_on               = [ "aws_launch_configuration.public_docker_cluster_lc" ]
+  depends_on               = [ "aws_launch_configuration.public_docker_cluster_lc", "aws_nat_gateway.icasei_nat-gw" ]
   name_prefix              = "public_docker_cluster_asg"
   vpc_zone_identifier      = [ "${aws_subnet.public-sub-b.id}", "${aws_subnet.public-sub-a.id}", "${aws_subnet.public-sub-c.id}" ]
   desired_capacity         = 3

@@ -31,4 +31,3 @@ elif [ ${ZONE} == "b" ]; then
 else
     aws ec2 create-tags --region us-east-1 --resources ${EC2_INSTANCE_ID} --tags Key=Name,Value=cluster-docker-c
 fi
-
