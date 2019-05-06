@@ -1,9 +1,0 @@
-[docker_swarm_manager]
-MANAGER1 ansible_ssh_host=172.17.0.166
-MANAGER2 ansible_ssh_host=172.17.0.166
-MANAGER3 ansible_ssh_host=172.17.0.166
-
-[docker_swarm_worker]
-WORKER1 ansible_ssh_host=172.17.1.24
-WORKER2 ansible_ssh_host=172.17.1.24
-WORKER3 ansible_ssh_host=172.17.1.24

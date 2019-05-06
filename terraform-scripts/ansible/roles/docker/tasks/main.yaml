@@ -1,8 +1,0 @@
-- name: Modificando hostname
-  shell: hostname {{ inventory_hostname }}
-
-- name: Reiniciar serviço do Docker
-  service:
-   name: docker
-   state: restarted
-   enabled: yes
