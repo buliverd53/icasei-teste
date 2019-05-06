@@ -124,7 +124,7 @@ resource "aws_launch_configuration" "private_docker_workers_lc" {
   user_data = "${file("start-worker.sh")}"
 }
 resource "aws_autoscaling_group" "private_docker_workers_asg" {
-  depends_on               = [ "aws_launch_configuration.private_docker_workers_lc" ]
+  depends_on               = [ "aws_launch_configuration.private_docker_workers_lc", "aws_nat_gateway.icasei_nat-gw" ]
   name_prefix              = "private_docker_workers_asg"
   vpc_zone_identifier      = [ "${aws_subnet.private-subnet-b.id}", "${aws_subnet.private-subnet-a.id}", "${aws_subnet.private-subnet-c.id}" ]
   desired_capacity         = 3
