@@ -1,4 +1,7 @@
 #!/bin/bash
+
+echo "Copiando conf ..."
+export ANSIBLE_CONFIG=${PWD}/ansible.cfg
 echo "Criando arquivo hosts ..."
 
 public_subnet=("Public Subnet A" "Public Subnet B" "Public Subnet C")
