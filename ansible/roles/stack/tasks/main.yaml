@@ -1,0 +1,5 @@
+- name: Baixando compose do S3
+  shell: aws s3 --region us-east-1 cp s3://icasei-tavares/docker-compose.yml .
+
+- name: Iniciando stack
+  shell: docker stack deploy --compose-file=/home/ec2-user/docker-compose.yml rafael_tavares

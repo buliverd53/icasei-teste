@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  rafael_tavares:
+    image: buliverd53/rafael-tavares:latest
+    ports:
+      - 80:80
+    deploy:
+      replicas: 3
+      placement:
+        constraints:
+          - node.role == worker
